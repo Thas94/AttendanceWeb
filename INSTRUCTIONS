@@ -1,0 +1,10 @@
+1. Open Visual studio code.
+2. Click file and go to open folder.
+3. Navigate to where you downloaded the project zip folder.
+4. Click view and open intergrated terminal.
+5. Once terminal is open type "cd Attendance" to navigate to the project.
+6. Make sure you are connected to the internet.
+7. Run these commands:
+	7.1 npm install
+	7.2 npm install -g @angular/cli
+8. When finished installing, run "ng serve --open" to launch the web app.

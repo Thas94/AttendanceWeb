@@ -1,0 +1,40 @@
+<br>
+<br>
+<br>
+          
+  <table class="table table-dark table-striped">
+    <thead>
+      <tr>
+        <th>F.NAME</th>
+        <th>L.NAME</th>
+        <th>STUDENT NO</th>
+        <th>COURSE</th>
+        <th>SUBJECT</th>
+        <th>START_TIME</th>
+        <th>END_TIME</th>
+        <th>PRESENT_BEGIN</th>
+        <th>PRESENT_END</th>
+        <th>DURATION</th>
+        <th>DATE</th>
+        <th>COMMENTS</th>
+        <th>STATUS</th>
+      </tr>
+    </thead>
+    <tbody *ngFor="let stud of attendance">
+      <tr>
+        <td>{{stud.FNAME}}</td>
+        <td>{{stud.LNAME}}</td>
+        <td>{{stud.STUDENT_NO}}</td>
+        <td>{{stud.COURSE}}</td>
+        <td>{{stud.NAME}}</td>
+        <td>{{stud.START_TIME}}</td>
+        <td>{{stud.END_TIME}}</td>
+        <td>{{stud.STUDENT_PRESENT_BEGIN}}</td>
+        <td>{{stud.STUDENT_PRESENT_END}}</td>
+        <td>{{stud.DURATION}}</td>
+        <td>{{stud.DATE}}</td>
+        <td>{{stud.COMMENTS}}</td>
+        <td>{{stud.status}}</td>
+      </tr>
+    </tbody>
+  </table>

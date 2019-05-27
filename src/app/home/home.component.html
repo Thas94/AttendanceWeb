@@ -1,0 +1,153 @@
+<div class="modal" id="myModal">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <!-- Modal Header -->
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal">&times;</button>
+      </div>
+
+      <!-- Modal body for sign in-->
+      <div class="modal-body text-center">
+        <h4>Student</h4>
+        <i class="fas fa-user-circle fa-10x text-primary"></i>
+        <form class="myform">
+            <div class=" row">   
+              <div class="col-lg-12 col-md-12 col-sm-12">
+                <div class="form-group"> 
+                  <input type="text" [(ngModel)]="StuName" name="username" class="form-control form-control-lg" placeholder="Username" required>
+                </div>
+              </div>
+              <div class="col-lg-12 col-md-12 col-sm-12">
+                <div class="form-group"> 
+                  <input type="password" minlength="6" [(ngModel)]="StuPass" name="password" class="form-control form-control-lg btn-block" placeholder="Password" required>
+                </div>
+              </div>
+            </div>
+            <button (click)="StudentLogin()" class="submit-btn btn-block">Sign In</button>
+          </form> 
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="modal" id="myModal3">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <!-- Modal Header -->
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal">&times;</button>
+      </div>
+
+      <!-- Modal body for sign in-->
+      <div class="modal-body text-center">
+        <h4>Sign Up Student</h4>
+        <i class="fas fa-user-circle fa-10x text-primary"></i>
+        <br>
+        <br>
+        <button class="btn btn-block btn-outline-success" (click)="Scan()">Scan Finger</button>
+        <form class="myform" #studentForm="ngForm" (ngSubmit)="registerStudent(studentForm)"> 
+            <div class=" row">   
+              <div class="col-lg-12 col-md-12 col-sm-12">
+                <div class="form-group"> 
+                  <input type="text" #Username="ngModel" [(ngModel)]="student.USERNAME" name="USERNAME" class="form-control form-control-lg" placeholder="Username" required>
+                </div>
+              </div>
+
+              <div class="col-lg-12 col-md-12 col-sm-12">
+                <div class="form-group"> 
+                  <input type="text" #fname="ngModel" [(ngModel)]="student.FNAME" name="FNAME" class="form-control form-control-lg" placeholder="First name" required>
+                </div>
+              </div>
+
+              <div class="col-lg-12 col-md-12 col-sm-12">
+                <div class="form-group"> 
+                  <input type="text" #lname="ngModel" [(ngModel)]="student.LNAME" name="LNAME" class="form-control form-control-lg" placeholder="Last name" required>
+                </div>
+              </div>
+
+              <div class="col-lg-12 col-md-12 col-sm-12">
+                <div class="form-group"> 
+                  <input type="text" #STUDENT_NO="ngModel" [(ngModel)]="student.STUDENT_NO" name="STUDENT_NO" class="form-control form-control-lg" placeholder="Student number" required>
+                </div>
+              </div>
+
+
+              <div class="col-lg-12 col-md-12 col-sm-12">
+                <div class="form-group"> 
+                  <input type="password" minlength="6" #password="ngModel" [(ngModel)]="student.PASSWORD" name="PASSWORD" class="form-control form-control-lg btn-block" placeholder="Password" required>
+                </div>
+              </div>
+
+              <div class="col-lg-12 col-md-12 col-sm-12">
+                <div class="form-group"> 
+                  <input type="hidden" id="scan" minlength="6" #fingerid="ngModel" [(ngModel)]="FINGER_ID" name="FINGER_ID" class="form-control form-control-lg btn-block" placeholder="FINGER_ID" required>
+                </div>
+              </div>
+            </div>
+            
+            <button type="submit" class="submit-btn btn-block">Sign Up</button>
+          </form> 
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="modal" id="myModal1">
+  <div class="modal-dialog">
+    <div class="modal-content">
+
+      <!-- Modal Header -->
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal">&times;</button>
+      </div>
+
+      <!-- Modal body for registration -->
+      <div class="modal-body text-center">
+        <h4>Admin</h4>
+        <i class="fas fa-user-cog fa-10x text-primary"></i>
+        <form class="myform">
+          <div class=" row">   
+            <div class="col-lg-12 col-md-12 col-sm-12">
+              <div class="form-group"> 
+                <input type="text" [(ngModel)]="AdmName" name="username" class="form-control form-control-lg" placeholder="Username" required>
+              </div>
+            </div>
+            <div class="col-lg-12 col-md-12 col-sm-12">
+              <div class="form-group"> 
+                <input type="password" minlength="6" [(ngModel)]="AdmPass" name="password" class="form-control form-control-lg btn-block" placeholder="Password" required>
+              </div>
+            </div>
+          </div>
+          <button class="submit-btn btn-block" (click)="AdminLogin()">Sign In</button>
+        </form> 
+      </div>
+    </div>
+  </div>
+</div>
+
+
+<div class="hero">
+  <h3>STUDENT ATTENDACE <i class="fas fa-users"></i> </h3>
+  <div>
+   <h5>Encouraging regular school attendance</h5>
+  </div>
+
+  <div class="hero-content">
+    <form class="myform">
+      <div class=" row">   
+  
+        
+        <div class="btn-group col-lg-16 col-lg-6">
+          <button type="button" class="btn btn-primary" style="width:100%" data-toggle="modal" data-target="#myModal1">Admin</button><br/>
+        </div>
+
+
+        
+        <div class="btn-group col-lg-16 col-lg-6">
+          <button type="button" class="btn btn-primary" style="width:100%" data-toggle="modal" data-target="#myModal3">Student</button><br/>
+        </div>
+      </div>
+    </form>  
+  </div>
+</div>
+
